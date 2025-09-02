@@ -9,8 +9,8 @@ CREATE TABLE cuentas (
     usu_correo VARCHAR(100) UNIQUE NOT NULL,
     usu_contraseña VARCHAR(255) NOT NULL,
     usu_tipo ENUM('Administrador','Consultor','Profesional','Reclutador') DEFAULT 'Consultor' NOT NULL,
-    usu_fecha_registro TIMESTAMP NOT NULL,
-    usu_activo BOOL NOT NULL
+    usu_fecha_registro DATETIME NOT NULL,
+    usu_activo BOOLEAN NOT NULL
 );
 -- Tabla de habilidades
 CREATE TABLE habilidades (
@@ -113,7 +113,7 @@ CREATE TABLE hojas_de_vida (
     hv_fecha_carga TIMESTAMP NOT NULL,
     hv_score_ia FLOAT NOT NULL,
     hv_resumen_automatico TEXT NOT NULL,
-    hv_verificado BOOL NOT NULL,
+    hv_verificado BOOLEAN NOT NULL,
 	FOREIGN KEY (usu_cedula) REFERENCES usuarios_info(usu_cedula) ON DELETE CASCADE
 );
 -- Tabla de notificaciones
@@ -123,7 +123,7 @@ CREATE TABLE notificaciones (
     not_titulo VARCHAR(255) NOT NULL,
     not_mensaje VARCHAR(255) NOT NULL,
     not_fecha_hora TIMESTAMP NOT NULL,
-    not_leida BOOL NOT NULL,
+    not_leida BOOLEAN NOT NULL,
     not_tipo VARCHAR(100) NOT NULL,
 	FOREIGN KEY (usu_cedula) REFERENCES usuarios_info(usu_cedula) ON DELETE CASCADE
 );
@@ -144,7 +144,7 @@ CREATE TABLE habilidades_cv (
     hab_id INT NOT NULL, -- Relación con habilidades
     hab_cv_nivel_dominio INT NOT NULL,
     hab_cv_descripcion VARCHAR(255) NOT NULL,
-    hab_cv_validada BOOL NOT NULL,
+    hab_cv_validada BOOLEAN NOT NULL,
     FOREIGN KEY (hv_id) REFERENCES hojas_de_vida(hv_id) ON DELETE CASCADE,
     FOREIGN KEY (hab_id) REFERENCES habilidades(hab_id) ON DELETE CASCADE
 );
@@ -214,7 +214,7 @@ CREATE TABLE requisitos (
     vac_id INT NOT NULL, -- Relación con vacantes
     hab_id INT NOT NULL, -- Relación con habilidades
     req_nivel_requerido INT NOT NULL,
-    req_obligatorio BOOL NOT NULL,
+    req_obligatorio BOOLEAN NOT NULL,
     req_ponderacion INT NOT NULL,
     FOREIGN KEY (vac_id) REFERENCES vacantes(vac_id) ON DELETE CASCADE,
     FOREIGN KEY (hab_id) REFERENCES habilidades(hab_id) ON DELETE CASCADE
@@ -373,8 +373,8 @@ CREATE TABLE evidencias_grupales (
     pro_id INT NOT NULL, -- Relacion con programaciones_grupales
     rr_id INT NOT NULL, -- Relación con responsable_rutas
     evi_mes VARCHAR(100) NOT NULL,
-    evi_fecha TIMESTAMP NOT NULL,
-    evi_hora_inicio TIMESTAMP NOT NULL,
+    evi_fecha DATETIME NOT NULL,
+    evi_hora_inicio DATETIME NOT NULL,
     evi_hora_fin TIMESTAMP NOT NULL,
     evi_horas_dictar INT NOT NULL,
     evi_valor_hora FLOAT NOT NULL,
@@ -397,9 +397,9 @@ CREATE TABLE evidencias_individuales (
     proin_id INT NOT NULL, -- Relacion con programaciones_individuales
     rr_id INT NOT NULL, -- Relación con responsable_rutas
     eviin_mes VARCHAR(100) NOT NULL,
-    eviin_fecha TIMESTAMP NOT NULL,
-    eviin_hora_inicio TIMESTAMP NOT NULL,
-    eviin_hora_fin TIMESTAMP NOT NULL,
+    eviin_fecha DATETIME NOT NULL,
+    eviin_hora_inicio DATETIME NOT NULL,
+    eviin_hora_fin DATETIME NOT NULL,
     eviin_horas_dictar INT NOT NULL,
     eviin_valor_hora FLOAT NOT NULL,
     eviin_valor_total_horas FLOAT NOT NULL,
@@ -467,7 +467,7 @@ CREATE TABLE cronograma_informes_ccb (
     fecha_maxima_facturacion DATE NOT NULL, -- Fecha máxima de facturación
     descripcion TEXT NULL, -- Descripción adicional del cronograma
     activo BOOLEAN DEFAULT TRUE,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     UNIQUE KEY unique_mes_ejecucion (mes_ejecucion)
 );
 
@@ -479,7 +479,7 @@ CREATE TABLE notificaciones_cronograma (
     dias_anticipacion INT NOT NULL DEFAULT 3, -- Días de anticipación para enviar la notificación
     mensaje_plantilla TEXT NOT NULL, -- Plantilla del mensaje de notificación
     activo BOOLEAN DEFAULT TRUE,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (cronograma_id) REFERENCES cronograma_informes_ccb(cronograma_id) ON DELETE CASCADE,
     UNIQUE KEY unique_cronograma_tipo (cronograma_id, tipo_fecha)
 );
