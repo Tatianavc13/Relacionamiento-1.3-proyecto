@@ -1609,6 +1609,7 @@ CREATE OR REPLACE VIEW v_proximas_fechas_limite AS
 SELECT 
     c.mes_ejecucion,
     c.fecha_maxima_envio_ccb,
+    
     DATEDIFF(c.fecha_maxima_envio_ccb, CURDATE()) as dias_hasta_envio,
     c.fecha_maxima_subsanacion,
     DATEDIFF(c.fecha_maxima_subsanacion, CURDATE()) as dias_hasta_subsanacion,
