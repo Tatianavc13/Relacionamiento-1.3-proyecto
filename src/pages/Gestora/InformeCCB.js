@@ -34,6 +34,7 @@ function InformeCCB() {
     //const [downloading, setDownloading] = useState(null);
     //const [expandedDetails, setExpandedDetails] = useState({});
     //const [openDetails, setOpenDetails] = useState({});
+    const [setOpenDetails] = useState({});
 
     // Estados para las firmas
     const [proveedorSignature, setProveedorSignature] = useState(null);
