@@ -11,6 +11,7 @@ import LoginForm from "./pages/Auth/LoginForm";
 import GestoraDashboard from "./pages/Gestora/GestoraDashboard";
 import Dashboard from "./pages/Gestora/Dashboard";
 import ConsultorDashboard from "./pages/Consultor/ConsultorDashboardPage";
+//Comentariado por error de carga en Railway
 import ReclutadorDashboard from "./pages/Reclutador/ReclutadorDashboard";
 import NotFound from "./pages/NotFound";
 
