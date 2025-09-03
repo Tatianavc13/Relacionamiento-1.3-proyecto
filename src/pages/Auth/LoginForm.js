@@ -28,6 +28,11 @@ function LoginForm() {
   const { login } = useAuth();
   // Obtiene la función navigate para poder redirigir al usuario
   const navigate = useNavigate();
+  const handleForgotPasswordClick = () => {
+    // Agrega la lógica para manejar el clic en "olvidé mi contraseña"
+    // Por ejemplo, puedes abrir un modal, redirigir a una nueva página, etc.
+    console.log("Se hizo clic en Olvidé mi contraseña");
+  };
 
   // Función que se ejecuta cuando el usuario selecciona un rol en el componente RoleSelectorTabs
   const handleRoleSelect = (role) => {
