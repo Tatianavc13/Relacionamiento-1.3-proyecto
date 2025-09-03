@@ -32,7 +32,7 @@ function NuevaProgramacionPage() {
   const [contratos, setContratos] = useState([]);
   const [loading, setLoading] = useState(true);
   {/*Se comentan las rutas que al momento no se encuentran en uso*/}
-  //const [gestoraCedula, setGestoraCedula] = useState(null);
+  const [setGestoraCedula] = useState(null);
 
   // =========================================================================
   // Estados para el formulario
