@@ -1,7 +1,6 @@
-//import React, { useEffect, useRef, useState } from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import './ReclutadorDashboard.css';
-
+//import React, { useEffect, useRef, useState } from 'react';
 function ReclutadorDashboard() {
   return (
     <DashboardLayout>
