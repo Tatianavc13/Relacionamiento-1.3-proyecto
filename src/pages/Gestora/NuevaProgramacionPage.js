@@ -1,10 +1,10 @@
 // src/pages/Gestora/NuevaProgramacionPage.js
 import React, { useState, useEffect } from "react";
+import { colors } from "../../colors";
 // Importamos Link para la navegación
 import { Link, useNavigate } from "react-router-dom";
 import DashboardLayout from "../../components/DashboardLayout";
 import "./NuevaProgramacionPage.css";
-import { colors } from "../../colors";
 {/*Se comentan las rutas que al momento no se encuentran en uso*/}
 //import * as XLSX from "xlsx";
 import apiService from "../../utils/api";
