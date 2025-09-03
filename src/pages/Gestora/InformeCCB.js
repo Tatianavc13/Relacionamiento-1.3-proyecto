@@ -149,13 +149,10 @@ function InformeCCB() {
     const formatCurrency = (value) => new Intl.NumberFormat('es-CO', {
         style: 'currency', currency: 'COP', minimumFractionDigits: 0
     }).format(value);
-    {/*Se comentan las rutas que al momento no se encuentran en uso*/}
-    {/*
     const handleOpenSignatureModal = (type) => {
         setCurrentSignatureType(type);
         setShowSignatureModal(true);
     };
-    */}
     const handleSaveSignature = (signatureData) => {
         if (currentSignatureType === 'proveedor') setProveedorSignature(signatureData);
         else if (currentSignatureType === 'ccb') setCcbSignature(signatureData);
