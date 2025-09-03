@@ -199,7 +199,8 @@ function LoginForm() {
             </div>
             {/* Enlace "¿Olvidaste tu contraseña?". Por ahora es un enlace '#' vacío. */}
             {/* Aplicamos el color 'primary' al enlace desde colors.js */}
-            <a href="#" className="forgot-password" style={{ color: colors.primary }}>¿Olvidaste tu contraseña?</a>
+            <button type="button" className="forgot-password" style={{ color: colors.primary }} onClick={handleForgotPasswordClick}> ¿Olvidaste tu contraseña?</button>
+            {/*<a href="#" className="forgot-password" style={{ color: colors.primary }}>¿Olvidaste tu contraseña?</a>*/}
           </div>
 
           {/* Botón para Iniciar Sesión */}

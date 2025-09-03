@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './EvidenceListPage.css';
-import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaUserTie, FaFileAlt, FaImage, FaCheckCircle, FaTimesCircle, FaArrowLeft, FaPlus, FaEdit, FaTrashAlt, FaCommentDots, FaPaperPlane, FaBan } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaUserTie, FaFileAlt, FaImage, FaCheckCircle, FaTimesCircle, FaArrowLeft, FaPlus, FaEdit, FaPaperPlane, FaBan } from 'react-icons/fa';
 import DashboardLayout from '../../components/DashboardLayout';
 import apiService from '../../utils/api';
 

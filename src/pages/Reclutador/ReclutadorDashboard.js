@@ -1,5 +1,6 @@
 // src/pages/Gestora/Dashboard.js
-import React, { useEffect, useRef, useState } from 'react';
+{/*Se comentan las rutas que al momento no se encuentran en uso*/}
+//import React, { useEffect, useRef, useState } from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import './ReclutadorDashboard.css';
 

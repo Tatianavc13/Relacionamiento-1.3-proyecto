@@ -14,8 +14,9 @@ import { FaFilePdf, FaTimes } from 'react-icons/fa';
 function InformeCCB() {
     // Estados para los filtros y datos del informe
     const [programas, setProgramas] = useState([]);
-    const [rutas, setRutas] = useState([]);
-    const [gestoras, setGestoras] = useState([]);
+    {/*Se comentan las rutas que al momento no se encuentran en uso*/}
+    //const [rutas, setRutas] = useState([]);
+    //const [gestoras, setGestoras] = useState([]);
     const [selectedPrograma, setSelectedPrograma] = useState('');
     const [selectedRuta, setSelectedRuta] = useState('');
     const [tipoInforme, setTipoInforme] = useState('ruta'); // 'ruta' o 'programa'
@@ -29,9 +30,10 @@ function InformeCCB() {
     });
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
-    const [downloading, setDownloading] = useState(null);
-    const [expandedDetails, setExpandedDetails] = useState({});
-    const [openDetails, setOpenDetails] = useState({});
+    {/*Se comentan las rutas que al momento no se encuentran en uso*/}
+    //const [downloading, setDownloading] = useState(null);
+    //const [expandedDetails, setExpandedDetails] = useState({});
+    //const [openDetails, setOpenDetails] = useState({});
 
     // Estados para las firmas
     const [proveedorSignature, setProveedorSignature] = useState(null);
@@ -139,18 +141,19 @@ function InformeCCB() {
     const getHorasMes = (mes) => reportData?.resumen?.horasPorMes?.[mes] || 0;
 
     const formatTime = (time) => time ? moment(time).format('h:mm A') : 'N/A';
-
-    const toggleDetails = (id) => setOpenDetails(prev => ({ ...prev, [id]: !prev[id] }));
+    {/*Se comentan las rutas que al momento no se encuentran en uso*/}
+    //const toggleDetails = (id) => setOpenDetails(prev => ({ ...prev, [id]: !prev[id] }));
 
     const formatCurrency = (value) => new Intl.NumberFormat('es-CO', {
         style: 'currency', currency: 'COP', minimumFractionDigits: 0
     }).format(value);
-
+    {/*Se comentan las rutas que al momento no se encuentran en uso*/}
+    {/*
     const handleOpenSignatureModal = (type) => {
         setCurrentSignatureType(type);
         setShowSignatureModal(true);
     };
-
+    */}
     const handleSaveSignature = (signatureData) => {
         if (currentSignatureType === 'proveedor') setProveedorSignature(signatureData);
         else if (currentSignatureType === 'ccb') setCcbSignature(signatureData);

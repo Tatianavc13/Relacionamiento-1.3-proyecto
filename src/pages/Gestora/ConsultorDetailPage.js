@@ -4,7 +4,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import DashboardLayout from '../../components/DashboardLayout';
 import './ConsultorDetailPage.css'; // Reusa tu CSS
 import apiService from '../../utils/api';
-import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFileAlt, FaCalendarAlt, FaClock, FaTrash, FaPencilAlt, FaSave, FaTimes } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaCalendarAlt, FaClock, FaTrash, FaPencilAlt, FaSave, FaTimes } from 'react-icons/fa';
 
 function ConsultorDetailPage() {
     const { cedula } = useParams();

@@ -5,10 +5,11 @@ import { Link, useNavigate } from "react-router-dom";
 import DashboardLayout from "../../components/DashboardLayout";
 import "./NuevaProgramacionPage.css";
 import { colors } from "../../colors";
-import * as XLSX from "xlsx";
+{/*Se comentan las rutas que al momento no se encuentran en uso*/}
+//import * as XLSX from "xlsx";
 import apiService from "../../utils/api";
 import { useAuth } from "../../context/AuthContext"; // Importamos useAuth
-import NotificationService from '../../utils/notificationService';
+//import NotificationService from '../../utils/notificationService';
 
 function NuevaProgramacionPage() {
   const navigate = useNavigate();
@@ -30,7 +31,8 @@ function NuevaProgramacionPage() {
   const [municipios, setMunicipios] = useState([]);
   const [contratos, setContratos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [gestoraCedula, setGestoraCedula] = useState(null);
+  {/*Se comentan las rutas que al momento no se encuentran en uso*/}
+  //const [gestoraCedula, setGestoraCedula] = useState(null);
 
   // =========================================================================
   // Estados para el formulario

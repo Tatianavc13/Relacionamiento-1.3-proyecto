@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import DashboardLayout from '../../components/DashboardLayout';
 import './ConsultorCrearPage.css';
 import apiService from '../../utils/api';
-import { FaUser, FaEnvelope, FaLock, FaPhone, FaMapMarkerAlt, FaFileAlt, FaSave, FaTimes, FaBriefcase, FaBuilding } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFileAlt, FaSave, FaTimes, FaBriefcase, FaBuilding } from 'react-icons/fa';
 
 function ConsultorCrearPage() {
     const navigate = useNavigate();
