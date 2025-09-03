@@ -1,16 +1,14 @@
-// src/pages/Gestora/NuevaProgramacionPage.js
 import React, { useState, useEffect } from "react";
 import { colors } from "../../colors";
-// Importamos Link para la navegación
 import { Link, useNavigate } from "react-router-dom";
 import DashboardLayout from "../../components/DashboardLayout";
 import "./NuevaProgramacionPage.css";
-{/*Se comentan las rutas que al momento no se encuentran en uso*/}
-//import * as XLSX from "xlsx";
 import apiService from "../../utils/api";
 import { useAuth } from "../../context/AuthContext"; // Importamos useAuth
 //import NotificationService from '../../utils/notificationService';
-
+// src/pages/Gestora/NuevaProgramacionPage.js
+//import * as XLSX from "xlsx";
+{/*Se comentan las rutas que al momento no se encuentran en uso*/}
 function NuevaProgramacionPage() {
   const navigate = useNavigate();
   const { userData } = useAuth(); // Obtenemos userData del contexto
