@@ -32,6 +32,7 @@ function InformeCCB() {
     const [error, setError] = useState('');
     {/*Se comentan las rutas que al momento no se encuentran en uso*/}
     //const [downloading, setDownloading] = useState(null);
+    const [setDownloading] = useState(null);
     //const [expandedDetails, setExpandedDetails] = useState({});
     //const [openDetails, setOpenDetails] = useState({});
     const [setOpenDetails] = useState({});
